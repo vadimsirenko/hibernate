@@ -22,8 +22,14 @@ public class App
             session.beginTransaction();
 
             Person person = session.get(Person.class, 1);
+            person.setName("Vadim Sirenko");
 
             System.out.println(person);
+
+            Person person2 = new Person("Elena", 34);
+            session.persist(person2);
+
+            session.remove(person);
 
             session.getTransaction().commit();
         }
