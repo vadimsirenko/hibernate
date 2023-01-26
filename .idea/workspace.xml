@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e9b284d-117b-4e36-bb11-078009d723f3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vasire/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +31,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/Java/apache-maven-3.8.7" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../Java/apache-maven-3.8.7" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -47,7 +50,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Java_Projects/labs/Library",
+    "last_opened_file_path": "C:/IdeaProjects/hibernate",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.26091954",
@@ -89,6 +92,7 @@
       <workItem from="1674548842632" duration="1592000" />
       <workItem from="1674638983842" duration="874000" />
       <workItem from="1674640205100" duration="3884000" />
+      <workItem from="1674733315148" duration="1685000" />
     </task>
     <servers />
   </component>
