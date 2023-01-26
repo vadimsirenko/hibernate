@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e9b284d-117b-4e36-bb11-078009d723f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vasire/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +58,11 @@
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "cb1f008eebf5012c4ef9a2c36e574d61"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RunManager">
@@ -92,7 +98,8 @@
       <workItem from="1674548842632" duration="1592000" />
       <workItem from="1674638983842" duration="874000" />
       <workItem from="1674640205100" duration="3884000" />
-      <workItem from="1674733315148" duration="1685000" />
+      <workItem from="1674733315148" duration="2399000" />
+      <workItem from="1674741703757" duration="990000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,11 @@
 package ru.vasire.model;
 import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,6 +26,7 @@ public class Person {
     private int age;
 
     @OneToMany(mappedBy = "owner")
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private List<Item> items;
 
     public List<Item> getItems() {
@@ -41,6 +44,13 @@ public class Person {
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public void addItem(Item item){
+        if(this.items == null)
+            this.items = new ArrayList<>();
+        this.items.add(item);
+        item.setOwner(this);
     }
 
     public int getId() {

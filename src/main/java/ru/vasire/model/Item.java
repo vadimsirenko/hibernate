@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Item {
     @Id
     @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "name")
@@ -16,9 +17,8 @@ public class Item {
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person owner;
 
-    public Item(String name, Person owner) {
+    public Item(String name) {
         this.name = name;
-        this.owner = owner;
     }
 
     public Item() {

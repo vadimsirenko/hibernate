@@ -23,24 +23,12 @@ public class App
         try {
             session.beginTransaction();
 
-            Person person = session.get(Person.class, 1);
-            person.setName("Vadim Sirenko");
+            Person person = new Person("Григорий 1", 38);
+            person.addItem(new Item("Шапка 1"));
+            person.addItem(new Item("Ботинки 1"));
+            person.addItem(new Item("Кружка 1"));
 
-            System.out.println(person);
-            System.out.println("Items:");
-            person.getItems().stream().forEach(i-> System.out.println(i));
-
-            Person person3 = session.get(Person.class, 3);
-            Item item = session.get(Item.class, 3);
-            item.setName("Телефон");
-            item.setOwner(person3);
-
-            person.getItems().remove(person.getItems().stream().filter(i->i.getId()==3).findFirst());
-
-            person3.setItems(new ArrayList<>());
-            person3.getItems().add(item);
-
-
+            session.persist(person);
 
             session.getTransaction().commit();
         }
