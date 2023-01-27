@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.39">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>841</IntrospectionStateNumber>
+      <IntrospectionStateNumber>917</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
-      <StartupTime>1674750165</StartupTime>
+      <StartupTime>1674800064</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -804,11 +804,12 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>841</IntrospectionStateNumber>
+      <IntrospectionStateNumber>917</IntrospectionStateNumber>
       <ObjectId>16422</ObjectId>
-      <Relations>sequence|table|16546|16547|1
-sequence|table|16553|16554|1
-sequence|table|16564|16565|1
+      <Relations>sequence|table|16753|16754|1
+sequence|table|16760|16761|1
+sequence|table|16771|16772|1
+sequence|table|16784|16785|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4222,207 +4223,329 @@ sequence|table|16564|16565|1
     <schema id="263" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>841</IntrospectionStateNumber>
+      <IntrospectionStateNumber>917</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <sequence id="264" parent="263" name="item_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>16553</ObjectId>
-      <StateNumber>837</StateNumber>
+      <ObjectId>16760</ObjectId>
+      <StateNumber>909</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="265" parent="263" name="passport_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>16564</ObjectId>
-      <StateNumber>839</StateNumber>
+      <ObjectId>16771</ObjectId>
+      <StateNumber>911</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="266" parent="263" name="person_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>16546</ObjectId>
-      <StateNumber>835</StateNumber>
+      <ObjectId>16753</ObjectId>
+      <StateNumber>907</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="267" parent="263" name="item">
-      <ObjectId>16554</ObjectId>
-      <StateNumber>837</StateNumber>
+    <sequence id="267" parent="263" name="subscribetion_id_seq">
+      <DataType>integer|0s</DataType>
+      <ObjectId>16784</ObjectId>
+      <StateNumber>913</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="268" parent="263" name="item">
+      <ObjectId>16761</ObjectId>
+      <StateNumber>909</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="268" parent="263" name="passport">
-      <ObjectId>16565</ObjectId>
-      <StateNumber>839</StateNumber>
+    <table id="269" parent="263" name="passport">
+      <ObjectId>16772</ObjectId>
+      <StateNumber>911</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="263" name="person">
-      <ObjectId>16547</ObjectId>
-      <StateNumber>837</StateNumber>
+    <table id="270" parent="263" name="person">
+      <ObjectId>16754</ObjectId>
+      <StateNumber>909</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="270" parent="267" name="id">
+    <table id="271" parent="263" name="person_subscribetion">
+      <ObjectId>16792</ObjectId>
+      <StateNumber>915</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="272" parent="263" name="subscribetion">
+      <ObjectId>16785</ObjectId>
+      <StateNumber>915</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <column id="273" parent="268" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>837</StateNumber>
+      <StateNumber>909</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="271" parent="267" name="name">
+    <column id="274" parent="268" name="name">
       <DataType>varchar(130)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>837</StateNumber>
+      <StateNumber>909</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="272" parent="267" name="person_id">
+    <column id="275" parent="268" name="person_id">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>837</StateNumber>
+      <StateNumber>909</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="273" parent="267" name="item_person_id_fkey">
+    <foreign-key id="276" parent="268" name="item_person_id_fkey">
       <ColNames>person_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16559</ObjectId>
+      <ObjectId>16766</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
       <RefKeyName>person_pkey</RefKeyName>
-      <StateNumber>837</StateNumber>
-      <RefTableId>16547</RefTableId>
+      <StateNumber>909</StateNumber>
+      <RefTableId>16754</RefTableId>
       <RefTableName>person</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="274" parent="267" name="item_pkey">
+    <index id="277" parent="268" name="item_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16557</ObjectId>
+      <ObjectId>16764</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>837</StateNumber>
+      <StateNumber>909</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="275" parent="267" name="item_pkey">
+    <key id="278" parent="268" name="item_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16558</ObjectId>
+      <ObjectId>16765</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>837</StateNumber>
-      <UnderlyingIndexId>16557</UnderlyingIndexId>
+      <StateNumber>909</StateNumber>
+      <UnderlyingIndexId>16764</UnderlyingIndexId>
     </key>
-    <column id="276" parent="268" name="id">
+    <column id="279" parent="269" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>839</StateNumber>
+      <StateNumber>911</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="277" parent="268" name="person_id">
+    <column id="280" parent="269" name="person_id">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
-      <StateNumber>839</StateNumber>
+      <StateNumber>911</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="278" parent="268" name="passport_number">
+    <column id="281" parent="269" name="passport_number">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>839</StateNumber>
+      <StateNumber>911</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="279" parent="268" name="passport_person_id_fkey">
+    <foreign-key id="282" parent="269" name="passport_person_id_fkey">
       <ColNames>person_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16572</ObjectId>
+      <ObjectId>16779</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
       <RefKeyName>person_pkey</RefKeyName>
-      <StateNumber>839</StateNumber>
-      <RefTableId>16547</RefTableId>
+      <StateNumber>911</StateNumber>
+      <RefTableId>16754</RefTableId>
       <RefTableName>person</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="280" parent="268" name="passport_pkey">
+    <index id="283" parent="269" name="passport_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16568</ObjectId>
+      <ObjectId>16775</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>839</StateNumber>
+      <StateNumber>911</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="281" parent="268" name="passport_person_id_key">
+    <index id="284" parent="269" name="passport_person_id_key">
       <ColNames>person_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16570</ObjectId>
-      <StateNumber>839</StateNumber>
+      <ObjectId>16777</ObjectId>
+      <StateNumber>911</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="282" parent="268" name="passport_pkey">
+    <key id="285" parent="269" name="passport_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16569</ObjectId>
+      <ObjectId>16776</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>839</StateNumber>
-      <UnderlyingIndexId>16568</UnderlyingIndexId>
+      <StateNumber>911</StateNumber>
+      <UnderlyingIndexId>16775</UnderlyingIndexId>
     </key>
-    <key id="283" parent="268" name="passport_person_id_key">
+    <key id="286" parent="269" name="passport_person_id_key">
       <ColNames>person_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16571</ObjectId>
-      <StateNumber>839</StateNumber>
-      <UnderlyingIndexId>16570</UnderlyingIndexId>
+      <ObjectId>16778</ObjectId>
+      <StateNumber>911</StateNumber>
+      <UnderlyingIndexId>16777</UnderlyingIndexId>
     </key>
-    <check id="284" parent="269" name="person_age_check">
+    <check id="287" parent="270" name="person_age_check">
       <ColNames>age</ColNames>
-      <ObjectId>16550</ObjectId>
+      <ObjectId>16757</ObjectId>
       <Predicate>age &gt; 0</Predicate>
-      <StateNumber>835</StateNumber>
+      <StateNumber>907</StateNumber>
     </check>
-    <column id="285" parent="269" name="id">
+    <column id="288" parent="270" name="id">
       <DataType>integer|0s</DataType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>835</StateNumber>
+      <StateNumber>907</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="286" parent="269" name="name">
+    <column id="289" parent="270" name="name">
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>835</StateNumber>
+      <StateNumber>907</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="287" parent="269" name="age">
+    <column id="290" parent="270" name="age">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>835</StateNumber>
+      <StateNumber>907</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="288" parent="269" name="person_pkey">
+    <index id="291" parent="270" name="person_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16551</ObjectId>
+      <ObjectId>16758</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>835</StateNumber>
+      <StateNumber>907</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="289" parent="269" name="person_pkey">
+    <key id="292" parent="270" name="person_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16552</ObjectId>
+      <ObjectId>16759</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>835</StateNumber>
-      <UnderlyingIndexId>16551</UnderlyingIndexId>
+      <StateNumber>907</StateNumber>
+      <UnderlyingIndexId>16758</UnderlyingIndexId>
+    </key>
+    <column id="293" parent="271" name="person_id">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>915</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="294" parent="271" name="subscribetion_id">
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>915</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="295" parent="271" name="person_subscribetion_person_id_fkey">
+      <ColNames>person_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16797</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <RefKeyName>person_pkey</RefKeyName>
+      <StateNumber>915</StateNumber>
+      <RefTableId>16754</RefTableId>
+      <RefTableName>person</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="296" parent="271" name="person_subscribetion_subscribetion_id_fkey">
+      <ColNames>subscribetion_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16802</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>915</StateNumber>
+      <RefTableId>16785</RefTableId>
+      <RefTableName>subscribetion</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="297" parent="271" name="person_group_pk">
+      <ColNames>person_id
+subscribetion_id</ColNames>
+      <ObjectId>16795</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>915</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="298" parent="271" name="person_group_pk">
+      <ColNames>person_id
+subscribetion_id</ColNames>
+      <ObjectId>16796</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>915</StateNumber>
+      <UnderlyingIndexId>16795</UnderlyingIndexId>
+    </key>
+    <column id="299" parent="272" name="id">
+      <DataType>integer|0s</DataType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>913</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="300" parent="272" name="name">
+      <DataType>varchar(30)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>913</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="301" parent="272" name="subscribetion_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16788</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>913</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="302" parent="272" name="subscribetion_name_key">
+      <ColNames>name</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16790</ObjectId>
+      <StateNumber>913</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="303" parent="272" name="subscribetion_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16789</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>913</StateNumber>
+      <UnderlyingIndexId>16788</UnderlyingIndexId>
+    </key>
+    <key id="304" parent="272" name="subscribetion_name_key">
+      <ColNames>name</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16791</ObjectId>
+      <StateNumber>913</StateNumber>
+      <UnderlyingIndexId>16790</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

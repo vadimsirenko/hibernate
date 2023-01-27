@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e9b284d-117b-4e36-bb11-078009d723f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Passport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vasire/model/Subscribetion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7deb70c0-70e1-4472-9da0-6badee20d880.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7deb70c0-70e1-4472-9da0-6badee20d880.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7deb70c0-70e1-4472-9da0-6badee20d880/storage_v2/_src_/database/hibernate_demo_db.bVH-1A/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7deb70c0-70e1-4472-9da0-6badee20d880/storage_v2/_src_/database/hibernate_demo_db.bVH-1A/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -102,7 +102,8 @@
       <workItem from="1674640205100" duration="3884000" />
       <workItem from="1674733315148" duration="2399000" />
       <workItem from="1674741703757" duration="2100000" />
-      <workItem from="1674750283702" duration="2274000" />
+      <workItem from="1674750283702" duration="2439000" />
+      <workItem from="1674816729582" duration="1633000" />
     </task>
     <servers />
   </component>

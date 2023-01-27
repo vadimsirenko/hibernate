@@ -6,7 +6,9 @@ import org.hibernate.cfg.Configuration;
 import ru.vasire.model.Item;
 import ru.vasire.model.Passport;
 import ru.vasire.model.Person;
+import ru.vasire.model.Subscribetion;
 
+import java.awt.color.ICC_Profile;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -20,7 +22,7 @@ public class App
     {
         Configuration configuration = new Configuration()
                 .addAnnotatedClass(Person.class).addAnnotatedClass(Item.class)
-                .addAnnotatedClass(Passport.class);
+                .addAnnotatedClass(Passport.class).addAnnotatedClass(Subscribetion.class);
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session =  sessionFactory.getCurrentSession();
         try {
@@ -36,11 +38,13 @@ public class App
             session.persist(person);
 */
 
-            Person person = session.get(Person.class, 4);
+            Person person = session.get(Person.class, 1);
 
             System.out.println(person);
+            System.out.println("Пдодписки:");
+            person.getSubscribetions().forEach(i->System.out.println(i));
 
-            session.remove(person);
+            //session.remove(person);
 
             session.getTransaction().commit();
         }

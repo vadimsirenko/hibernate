@@ -33,6 +33,21 @@ public class Person {
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     private Passport passport;
 
+    @ManyToMany(mappedBy = "persons")
+    private List<Subscribetion> subscribetions;
+
+    public Passport getPassport() {
+        return passport;
+    }
+
+    public List<Subscribetion> getSubscribetions() {
+        return subscribetions;
+    }
+
+    public void setSubscribetions(List<Subscribetion> subscribetions) {
+        this.subscribetions = subscribetions;
+    }
+
     public List<Item> getItems() {
         return items;
     }
